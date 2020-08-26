@@ -1,0 +1,19 @@
+.rodape {
+    justify-content: center;
+    background-color: #1f034a;
+    height: 80px;
+}
+
+.rodape h3 {
+    text-align: center;
+}
+
+.rodape footer {
+    color: #ac87dd;
+    padding-top: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ac87dd;
+}

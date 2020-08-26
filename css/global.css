@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.titulo {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #1f034a;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+body {
+    background-color: #f0dcfa;
+    font-family: Roboto, sans-serif;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}

@@ -1,0 +1,26 @@
+.barra-de-pesquisa {
+    border: 1px solid #686666;
+    border-radius: 5px;
+    width: auto;
+    background: #ffffff;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#campo {
+    margin: 5px;
+    background: none;
+    border: none;
+    color: #666565
+}
+
+#lupa {
+    margin: 5px;
+    background: none;
+    border: none;
+}
+
+.fa-search {
+    color: #686666;
+}

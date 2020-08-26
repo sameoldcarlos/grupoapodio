@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #1f034a;
+    font-family: Roboto, sans-serif;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.cabecalho {
+    background-color: rgb(95, 83, 83, 0.6);
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 80%;
+    grid-row: 1/2;
+
+}
+
+#wrap-menu {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-items: center;
+    position: absolute;
+}
+
+.conteudo {
+    width: 100%;
+}
+
+.conteudo-titulo {
+    margin-top: 60px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+.grid-news {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.secao {}
+
+.secao-redes {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+}
+
+.redes {
+    width: 180px;
+    height: 45px;
+    border-radius: 5px;
+    border: 2px solid #ac87dd;
+
+}
+
+.rede {
+    display: block;
+    width: 25px;
+    height: 25px;
+    float: left;
+    padding: 10px 10px;
+}
+
+.rede img {
+    width: 25px;
+}
+
+.rede img:hover {
+    opacity: 70%;
+
+}
+
+.secao-noticias {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.noticia {
+    max-width: 400px;
+    max-height: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0px 20px;
+    background-color: #f6f7bc;
+    border-radius: 5px;
+
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.noticia-titulo,
+.noticia-corpo {
+    text-align: center;
+    padding: 5px 0px;
+    color: #1f034a;
+}
+
+.noticia a {
+    float: right;
+}
+
+.noticia-corpo {}
+
+/* Slideshow container */
+.carousel-container {
+    grid-column: 1/4;
+    grid-row: 1/5;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    max-height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+.mySlides .text {
+    top: 50%;
+    font-size: 25px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 0px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.texto {
+    position: unset;
+
+}
+
+.btnMenu {
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-indent: -9999px;
+    padding: 20px 35px;
+    float: right;
+}
+
+.btnMenu_open {
+    display: block;
+    background-image: url(../assets/img/btnMenu_open.svg);
+
+}
+
+.btnMenu_close {
+    background-color: #ac87dd;
+    background-image: url(../assets//img/btnMenu_close.svg);
+
+
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 200ms linear;
+    z-index: 9999;
+}
+
+.menu_open {
+    transform: translateY(0%);
+}
+
+.menu-item {
+    border-bottom: 1px solid #ac87dd;
+    padding: 20px 15px;
+    background: #1f034a;
+}
+
+.menu-item-action {
+    color: #ac87dd;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo {
+    grid-row: 1/2;
+    margin: 10px 10px;
+    position: absolute;
+}
+
+.logo-action {
+    display: block;
+}
+
+.logo-action:hover {
+    opacity: 70%;
+}
+
+.logo-action-img {
+    max-width: 100px;
+}
+
+
+
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.conteudo {
+    padding-top: 30px;
+    color: #ac87dd;
+    position: relative;
+}
+
+
+
+.rodape {
+    background-color: #1B1332;
+    justify-content: center;
+    height: 80px;
+
+}
+
+.rodape h3 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ac87dd;
+}
+
+.wrap-menu {
+    grid-column: 3/3;
+    grid-row: 1/2;
+    grid-template-rows: 1fr;
+    justify-content: flex-end;
+}
+
+.wrapper-timelines {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.timeline {
+    width: 95%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+@media (min-width: 700px) {
+    .secao-noticias {
+        grid-template-columns: 25% 25% 25% 25%;
+        padding-left: 0px;
+    }
+
+    .noticia {
+        margin: 30px 10px;
+    }
+
+    .noticia-corpo {
+        font-size: 20px;
+    }
+
+    .noticia-titulo {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .wrapper-timelines {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #primeira-noticia {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    #segunda-noticia {
+        grid-row: 1/2;
+        grid-column: 3/5;
+    }
+
+    #insta-tl {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    #twitter-tl {
+        grid-row: 1/2;
+        grid-column: 3/5;
+    }
+}
+
+
+
+
+@media (min-width: 1100px) {
+
+    .conteudo-titulo {
+        font-size: 30px;
+    }
+
+    .secao-noticias {
+        margin-top: 60px;
+        margin-bottom: 100px;
+        grid-gap: 3%;
+        grid-template-columns: 15.025% 30.025% 30.025% 15.025%;
+    }
+
+    .noticia {
+        margin: 0 auto;
+    }
+
+
+
+    .noticia-titulo {
+        font-weight: 700;
+    }
+
+    .wrapper-timelines {
+        margin-top: 100px;
+        grid-gap: 3%;
+        grid-template-columns: 15.025% 30.025% 30.025% 15.025%;
+    }
+
+    #primeira-noticia {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    #segunda-noticia {
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+
+    #insta-tl {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    #twitter-tl {
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+
+    .main-wrapper {
+        display: grid;
+
+        grid-template-columns: 20% 80%;
+    }
+
+    .wrap-menu {
+        grid-column: 2/3;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    .menu {
+        width: auto;
+        transform: translateY(0%);
+        background-color: none;
+        padding-right: 0;
+        margin: 0;
+        top: auto;
+        left: auto;
+
+    }
+
+    .menu-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left;
+        padding-top: 15px;
+        font-size: 22px;
+        list-style: none;
+        border-bottom: none;
+        background: none;
+
+    }
+
+
+
+    .menu-item-action {
+        display: block;
+        height: 60px;
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    .menu-item-action:hover {
+        color: #f2f20c;
+    }
+
+    .btnMenu {
+        opacity: 0;
+        display: none;
+    }
+
+    .logo-action-img {
+        max-width: 150px;
+    }
+
+
+
+
+
+}

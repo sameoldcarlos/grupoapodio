@@ -1,0 +1,95 @@
+.conteudo {
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+h1,
+h2 {
+    color: #1F034A;
+    max-width: 900px;
+    margin: 20px auto;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+.evento {
+    display: flex;
+}
+
+.evento-recente {
+    margin: 30px auto;
+    border-bottom: 5px solid #808080;
+    max-width: 900px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.evento-recente img {
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.eventos-passados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    height: auto;
+    grid-gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.evento-passado {
+    margin: 0 auto;
+}
+
+.evento-passado img {
+    width: 200px;
+}
+
+.evento-info {
+    margin-left: 20px;
+    justify-content: center;
+    width: 150px;
+}
+
+.evento-passado .evento-info {
+    height: 100%;
+
+}
+
+.evento-titulo,
+.evento-descricao {
+    color: #1F034A;
+    text-align: center;
+}
+
+.evento-descricao {
+    margin-top: 20px;
+}
+
+@media (max-width: 400px) {
+    .evento {
+        display: block;
+    }
+
+    .evento-recente img {
+        width: 100%;
+        justify-self: center;
+    }
+
+    .evento-info {
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
