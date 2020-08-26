@@ -367,6 +367,13 @@ footer a {
     border-radius: 5px;
 }
 
+@media (max-width: 700px) {
+    .mySlides .text {
+        top: 15%;
+        font-size: 25px;
+    }
+}
+
 @media (min-width: 700px) {
     .secao-noticias {
         grid-template-columns: 25% 25% 25% 25%;
