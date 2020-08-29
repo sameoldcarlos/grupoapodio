@@ -61,11 +61,15 @@
     padding: 0px 15px;
 }
 
-.noticia-descricao {}
-
-.noticia-titulo,
 .noticia-descricao {
-    color: #1f034a;
+    font-size: 20px;
+    color: #575757;
+}
+
+.noticia-titulo {
+    color: #7F3BA4;
+    font-weight: 700;
+    margin-bottom: 10px;
 
 }
 

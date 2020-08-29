@@ -87,9 +87,11 @@ header p {
 }
 
 .album-titulo {
+    font-family: 'Crimson Text', serif;
+    font-size: 25px;
     color: #1f034aec;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .album-capa a {

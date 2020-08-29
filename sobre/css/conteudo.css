@@ -19,22 +19,29 @@
 
 }
 
+.sobre-texto {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+}
+
 .conteudo .sobre-titulo {
     text-align: center;
 }
 
 #sobre {
-    border-bottom: 1px solid #1f034a;
+    border-bottom: 1px solid #80758a;
 }
 
 h2 {
-    text-align: center;
+    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
     color: #1f034a;
-    margin-bottom: 20px;
 }
 
 .info-nome {
-    color: #b8b520;
+    color: #7F3BA4;
 }
 
 .membros {
@@ -45,7 +52,7 @@ h2 {
     width: 90%;
     max-width: 1200px;
     height: fit-content;
-    color: #1f034a;
+    color: #80758a;
 }
 
 .membro {
@@ -72,17 +79,19 @@ h2 {
     height: 100px;
     border-radius: 50%;
     border: 3px solid #ffffff;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0, .6);
 }
 
 .info {
-    text-align: center;
+    text-align: left;
     margin: 10px;
-    margin-left: 0;
+    margin-left: 15x;
     width: fit-content;
 }
 
 .info-funcao {
     margin-bottom: 15px;
+    text-align: left;
 }
 
 @media (min-width: 500px) {
