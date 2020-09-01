@@ -1,8 +1,7 @@
 #wrap-menu {
-    align-items: center;
     width: 100%;
     background: #1f034aec;
-    height: 80px;
+    height: 60px;
     box-shadow: 1px 1px 3px rgb(0, 0, 0, .6);
 }
 
@@ -11,7 +10,7 @@
     background-position: 15px center;
     text-indent: -9999px;
     padding: 20px 35px;
-    float: right;
+    background-position: right 3% top 10px;
 }
 
 .btnMenu_open {
@@ -21,8 +20,9 @@
 }
 
 .btnMenu_close {
-    background-color: #ac87dd;
+    background-color: none;
     background-image: url(../assets//img/btnMenu_close.svg);
+
 
 
 }

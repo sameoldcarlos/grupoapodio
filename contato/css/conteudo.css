@@ -72,9 +72,12 @@
     margin: 5px 1%;
     height: 25px;
     background: none;
+    border: none;
 }
 
-
+input[type=email]:not(:placeholder-shown):invalid {
+    color: red;
+}
 
 #mensagem {
     height: 200px;

@@ -68,8 +68,14 @@ h2 {
     text-decoration: none;
 }
 
-.membro a:hover {
-    opacity: 70%;
+.membros:hover > * {
+    opacity: 0.5;
+    transition: 300ms opacity;
+}
+
+.membros:hover > *:hover {
+    opacity: 1;
+    transition: 300ms opacity;
 }
 
 .membro-foto {
