@@ -101,19 +101,11 @@ header button {
 .content__section {
     grid-area: content__section;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-areas:
-        ". playlist__one ."
-        ". playlist__two .";
+    grid-template-columns: 10% 1fr 10%;    
     margin-bottom: 60px;
 }
-
-.playlist__one {
-    grid-area: playlist__one;
-}
-
-.playlist__two {
-    grid-area: playlist__two;
+.playlist{
+    grid-column: 2/3;
 }
 
 .playlist__title {
@@ -123,13 +115,12 @@ header button {
 
 .videos {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
 .video {
     height: 180px;
-    grid-column-start: span 3;
     position: relative;
     transition: var(--ease);
     background-size: cover;
@@ -160,15 +151,3 @@ header button {
     opacity: 1;
 }
 
-@media only screen and (max-width: 1100px) {
-    .video {
-        grid-column-start: span 6;
-        height: 240px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .video {
-        grid-column-start: span 12;
-    }
-}

@@ -16,31 +16,13 @@
     <link rel="stylesheet" type="text/css" href="css/conteudo.css">
     <link rel="stylesheet" type="text/css" href="../css/rodape.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="logo">
-            <a class="logo-action" href="/">
-                <img class="logo-action-img" src="../assets/img/logo-apodio.png"></img>
-            </a>
-
-        </div>
-        <nav id="wrap-menu" class="wrap-menu">
-            <a href="#menu" class="btnMenu btnMenu_open"></a>
-            <ul id="menu" class="menu">
-                <li class="btnMenu btnMenu_close">Sair</li>
-                <li class="menu-item"><a href="/" class="menu-item-action">Home</a></li>
-                <li class="menu-item"><a href="/sobre/" class="menu-item-action">Quem Somos</a></li>
-                <li class="menu-item"><a href="/noticias/" class="menu-item-action">Notícias</a></li>
-                <li class="menu-item"><a href="/agenda/" class="menu-item-action">Agenda</a></li>
-                <li class="menu-item"><a href="/fotos/" class="menu-item-action">Fotos</a></li>
-                <li class="menu-item"><a href="/videos/" class="menu-item-action">Vídeos</a></li>
-                <li class="menu-item"><a href="/contato/" class="menu-item-action">Contato</a></li>
-                <li class="menu-item"><a href="/patrocine/" class="menu-item-action">Patrocine</a></li>
-            </ul>
-            <br>
-        </nav>
+    <div class="cabecalho" id="cabecalho">
+        <Logo image='../assets/img/logo-apodio.png'></Logo>
+        <Wrapmenu></Wrapmenu>
     </div>
     <h1 class="titulo">Contato</h1>
     <div class=conteudo>
@@ -85,14 +67,11 @@
         <p class="nota-rodape">"Ocupem todos os espaços, espalhem arte e NÃO SE SABOTEM". 🎭</p class="nota-rodape">
     </div>
 
-    <div class="rodape">
-        <footer>
-            <h3>
-                Desenvolvido com &#10084; por <a href="https://www.instagram.com/sameoldcarlos">Carlos Alves</a>
-            </h3>
-        </footer>
+    <div id="rodape" class="rodape">
+        <Rodape></Rodape>
     </div>
-    <script type="text/javascript" src="../js/menu.js"></script>
+    <script src="../js/rodape.js"></script>
+    <script src="../js/cabecalho.js"></script>
 </body>
 
 </html>

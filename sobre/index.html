@@ -15,31 +15,13 @@
     <link rel="stylesheet" type="text/css" href="/sobre/css/conteudo.css">
     <link rel="stylesheet" type="text/css" href="../css/rodape.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="logo">
-            <a class="logo-action" href="/">
-                <img class="logo-action-img" src="../assets/img/logo-apodio.png"></img>
-            </a>
-
-        </div>
-        <nav id="wrap-menu" class="wrap-menu">
-            <a href="#menu" class="btnMenu btnMenu_open"></a>
-            <ul id="menu" class="menu">
-                <li class="btnMenu btnMenu_close">Sair</li>
-                <li class="menu-item"><a href="/" class="menu-item-action">Home</a></li>
-                <li class="menu-item"><a href="/sobre/" class="menu-item-action">Quem Somos</a></li>
-                <li class="menu-item"><a href="/noticias/" class="menu-item-action">Notícias</a></li>
-                <li class="menu-item"><a href="/agenda/" class="menu-item-action">Agenda</a></li>
-                <li class="menu-item"><a href="/fotos/" class="menu-item-action">Fotos</a></li>
-                <li class="menu-item"><a href="/videos/" class="menu-item-action">Vídeos</a></li>
-                <li class="menu-item"><a href="/contato/" class="menu-item-action">Contato</a></li>
-                <li class="menu-item"><a href="/patrocine/" class="menu-item-action">Patrocine</a></li>
-            </ul>
-            <br>
-        </nav>
+    <div class="cabecalho" id="cabecalho">
+        <Logo image='../assets/img/logo-apodio.png'></Logo>
+        <Wrapmenu></Wrapmenu>
     </div>
     <div class="conteudo">
         <div id="sobre" class="sobre">
@@ -65,139 +47,26 @@
             </p>
         </div>
         <h2 class=membros-titulo>Membros</h2>
-        <div class="membros">
-            <div class="membro">
-                <a href="https://www.instagram.com/ocaiogabriel/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-caio.jpg"></img>
+        <div class="membros" id="app">
+            <div class="membro" v-for='membro in membros'>
+                <a :href='membro.insta' target="_blank">
+                    <img class="membro-foto" :src='membro.avatar'></img>
                 </a>
                 <div class="info">
-                    <h3 class="info-nome">Caio Gabriel</h3>
+                    <h3 class="info-nome">{{membro.nome}}</h3>
                     <ul class="info-funcao">
-                        <li>Elenco</li>
+                        <li v-for='funcao in membro.funcoes'>{{funcao}}</li>
                     </ul>
                 </div>
             </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/sameoldcarlos/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-carlos.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Carlos Alves</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Banda</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/serenalunar/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-gabi.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Gabriela Pereira</h3>
-                    <ul class="info-funcao">
-                        <li>Direção</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/jessicaferreirac/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-jessica.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Jéssica Ferreira</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/atributoprivado/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-lais.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Laís Oliveira</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Banda</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/manuellapedra/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-manu.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Manuela Pedra</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/fuxxielott/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-raisa.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Raísa Lima</h3>
-                    <ul class="info-funcao">
-                        <li>Direção</li>
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/siryguejo" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-siria.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Síria Carinhanha</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/tali_sm/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-taline.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Taline Mercês</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="membro">
-                <a href="https://www.instagram.com/araujoyur/" target="_blank">
-                    <img class="membro-foto" src="../assets/img/membros-avatar/avatar-yuri.jpg"></img>
-                </a>
-                <div class="info">
-                    <h3 class="info-nome">Yuri Araújo</h3>
-                    <ul class="info-funcao">
-                        <li>Elenco</li>
-                        <li>Produção</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </div>        
     </div>
-    <div class="rodape">
-        <footer>
-            <h3>
-                Desenvolvido com <i class="fas fa-heart"></i> por <a href="https://www.instagram.com/sameoldcarlos">Carlos Alves</a>
-            </h3>
-        </footer>
+    <div id="rodape" class="rodape">
+        <Rodape></Rodape>
     </div>
-    <script type="text/javascript" src="../js/menu.js"></script>
+    <script src="../js/rodape.js"></script>
+    <script src="../js/membros.js"></script>
+    <script src="../js/cabecalho.js"></script>
 </body>
 
 </html>
